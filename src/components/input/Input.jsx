@@ -7,11 +7,11 @@
 // В компонент Input потрібно передати через props метод onChange, який буде у консоль виводити значення, введене користувачем.
 
 const Input = ({ onChange }) => {
-    const Change = (event) => {
-        console.log(`Your value is ${event.target.value}`);
+    const handleChange = (event) => {
+        onChange(event);
     }
     return (
-        <input type="text" onChange={Change} />
+        <input type="text" onChange={handleChange} />
     );
 };
 
